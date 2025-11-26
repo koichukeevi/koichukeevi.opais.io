@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный Плеер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Музыкальный Плеер</h1>
+            <a href="../../index.html" class="back-btn">← Назад</a>
+        </header>
+
+        <div class="player">
+            <div class="album-art">
+                <img id="albumImage" src="" alt="Обложка альбома">
+                <div class="vinyl"></div>
+            </div>
+
+            <div class="song-info">
+                <h2 id="songTitle">Выберите трек</h2>
+                <p id="songArtist">Артист</p>
+            </div>
+
+            <div class="progress-container">
+                <span id="currentTime">0:00</span>
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <span id="duration">0:00</span>
+            </div>
+
+            <div class="controls">
+                <button onclick="previousSong()" class="control-btn">⏮️</button>
+                <button onclick="togglePlay()" id="playBtn" class="play-btn">▶️</button>
+                <button onclick="nextSong()" class="control-btn">⏭️</button>
+            </div>
+
+            <div class="volume-control">
+                <span>🔊</span>
+                <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider">
+                <span id="volumeValue">50%</span>
+            </div>
+
+            <div class="playlist">
+                <h3>Плейлист</h3>
+                <div id="playlist" class="playlist-items"></div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
