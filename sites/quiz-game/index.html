@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❓ Викторина</h1>
+            <a href="../../index.html" class="back-btn">← Назад</a>
+        </header>
+
+        <div id="startScreen" class="screen active">
+            <h2>Добро пожаловать в викторину!</h2>
+            <p>Проверьте свои знания в разных областях</p>
+            <div class="categories">
+                <button onclick="startQuiz('programming')" class="category-btn">💻 Программирование</button>
+                <button onclick="startQuiz('science')" class="category-btn">🔬 Наука</button>
+                <button onclick="startQuiz('history')" class="category-btn">📜 История</button>
+            </div>
+        </div>
+
+        <div id="quizScreen" class="screen">
+            <div class="quiz-header">
+                <div class="score">Счет: <span id="score">0</span></div>
+                <div class="progress">Вопрос <span id="currentQuestion">1</span>/<span id="totalQuestions">5</span></div>
+                <div class="timer">⏱️ <span id="timeLeft">30</span>с</div>
+            </div>
+
+            <div class="question-section">
+                <h2 id="questionText"></h2>
+                <div id="answers" class="answers"></div>
+            </div>
+
+            <button onclick="nextQuestion()" id="nextBtn" class="next-btn">Следующий вопрос</button>
+        </div>
+
+        <div id="resultScreen" class="screen">
+            <h2>Результаты викторины!</h2>
+            <div class="result-score">
+                <div class="score-circle">
+                    <span id="finalScore">0</span>/<span id="maxScore">5</span>
+                </div>
+                <p id="resultMessage"></p>
+            </div>
+            <div class="result-actions">
+                <button onclick="restartQuiz()" class="btn-restart">🔄 Начать заново</button>
+                <button onclick="showStartScreen()" class="btn-menu">📋 Выбрать категорию</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
