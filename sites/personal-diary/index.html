@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Дневник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 Мой Дневник</h1>
+            <div class="header-controls">
+                <button id="themeToggle">🌙</button>
+                <a href="../../index.html" class="back-btn">← Назад</a>
+            </div>
+        </header>
+
+        <div class="editor-section">
+            <div class="input-group">
+                <input type="text" id="postTitle" placeholder="Заголовок записи...">
+                <textarea id="postContent" placeholder="Расскажите о своем дне..."></textarea>
+            </div>
+            <div class="controls">
+                <button onclick="savePost()" class="btn-save">💾 Сохранить</button>
+                <button onclick="clearEditor()" class="btn-clear">🗑️ Очистить</button>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Поиск по записям...">
+            <button onclick="searchPosts()">🔍 Найти</button>
+        </div>
+
+        <div class="posts-section">
+            <h2>Мои записи</h2>
+            <div id="postsList" class="posts-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
