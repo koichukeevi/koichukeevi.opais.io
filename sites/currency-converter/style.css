@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+    min-height: 100vh;
+    color: #2d3436;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.converter {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.input-section {
+    margin-bottom: 2rem;
+}
+
+.amount-input {
+    margin-bottom: 1.5rem;
+}
+
+.amount-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.amount-input input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: border-color 0.3s;
+}
+
+.amount-input input:focus {
+    border-color: #00b894;
+    outline: none;
+}
+
+.currency-selectors {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.currency-selector {
+    flex: 1;
+}
+
+.currency-selector label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.currency-selector select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.currency-selector select:focus {
+    border-color: #00b894;
+    outline: none;
+}
+
+.swap-btn {
+    background: #74b9ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1.8rem;
+}
+
+.swap-btn:hover {
+    background: #0984e3;
+    transform: scale(1.05);
+}
+
+.result-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.conversion-result {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00b894;
+    margin-bottom: 0.5rem;
+}
+
+.exchange-rate {
+    color: #636e72;
+    font-size: 1rem;
+}
+
+.convert-btn {
+    width: 100%;
+    background: #00b894;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 1rem;
+}
+
+.convert-btn:hover {
+    background: #00a085;
+}
+
+.last-updated {
+    text-align: center;
+    color: #636e72;
+    font-size: 0.9rem;
+}
+
+.popular-conversions {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.popular-conversions h3 {
+    margin-bottom: 1rem;
+    color: #2d3436;
+}
+
+.conversion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.conversion-card {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.conversion-card:hover {
+    background: #e9ecef;
+    border-color: #00b894;
+    transform: translateY(-2px);
+}
+
+.conversion-pair {
+    font-weight: bold;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+}
+
+.conversion-rate {
+    color: #00b894;
+    font-weight: bold;
+}
+
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.error {
+    color: #d63031;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #ffeaa7;
+    border-radius: 8px;
+    border-left: 4px solid #d63031;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .currency-selectors {
+        flex-direction: column;
+    }
+    
+    .swap-btn {
+        margin-top: 0;
+        align-self: center;
+    }
+    
+    .conversion-grid {
+        grid-template-columns: 1fr;
+    }
+  }
