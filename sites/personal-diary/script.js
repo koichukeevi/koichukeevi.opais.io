@@ -43,7 +43,7 @@ function savePost() {
     const saveBtn = document.querySelector('.btn-save');
     saveBtn.textContent = '✓ Сохранено!';
     setTimeout(() => {
-        saveBtn.textContent = '💾 Сохранить';
+        saveBtn.textContent = 'Сохранить';
     }, 2000);
 }
 
@@ -74,8 +74,8 @@ function renderPosts(filteredPosts = null) {
             </div>
             <div class="post-content">${escapeHtml(post.content)}</div>
             <div class="post-actions">
-                <button class="btn-edit" onclick="editPost(${post.id})">✏️ Редактировать</button>
-                <button class="btn-delete" onclick="deletePost(${post.id})">🗑️ Удалить</button>
+                <button class="btn-edit" onclick="editPost(${post.id})">Редактировать</button>
+                <button class="btn-delete" onclick="deletePost(${post.id})">Удалить</button>
             </div>
         </div>
     `).join('');
